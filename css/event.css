@@ -1,0 +1,82 @@
+:root{
+    --main-color-or:#ff6700;
+    --sub-color-r:#ff0000;
+    --sub-color-p:#ff4fc7;
+    --sub-color-bl:#00b3ff;
+    --sub-color-g:#00c415;
+    --background-color:#f5f5f5;
+}
+
+body #wrap main .program{background: rgba(5, 5, 5, 1); color: #fff;}
+
+
+
+
+
+.program .visual_section{ position: relative; height: 100vh;}
+.program .visual_section img{height: 100%; width: 100%; object-fit: cover; filter: brightness(0.7) ;}
+
+.program .inner{display: grid; grid-template-columns:  auto;}
+.program .program_tab{ display: flex; justify-content: center; border-bottom: solid 5px var(--main-color);border-radius: 30px; margin-bottom: 50px; gap: 30px; position: absolute; left: 0; top:50%; transform: translateY(-50%); width: 100%; margin: 0 auto; }
+
+.program .program_tab button{cursor: pointer;  background: transparent; font-size: 2rem; padding: 15px 0 ; color: var(--main-color); border-radius: 50%; height: 150px;width: 150px;background: rgba(0,0,0,0.4);} 
+.program .program_tab button:hover{  background: #000;transition: all 0.5s;}
+.program .program_tab button.active{ transform: scale(2.5) ; border-left: 1px solid var(--main-color); background: transparent; font-size: 2rem; padding: 15px 0 ; color: var(--main-color);background:url(../img_visual_color/4_mix_rnd.png) no-repeat center /cover; color: #fff; font-weight: 600; transition: all 0.5s; align-items: start;margin: 0 100px; order: 0;}
+
+.program .program_tab button.active.big{transform: scale(1.8); }
+.program .program_tab button.active.small{transform: scale(0.5);}
+
+
+.program .program_list{margin-top: 50px;}
+.program .program_list > .program_each_list:not(:first-child) { display: none; }
+.program .visual_section img:not(:first-child) { display: none; }
+
+.program .program_list .program_txt{position: absolute; left: 0; bottom: 0 ; width: 100%; margin: 0 auto; height: 300px; text-align: center; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.9));}
+.program .program_list .program_txt p{font-size: 2rem; margin-top: 20px; background: rgba(0,0,0,0.7); display: inline-block; padding:  15px 20px ; line-height: 1.5;}
+.program .program_list .movie_cap{color: rgba(255, 255, 255, 0.8); margin-top: 50px; }
+.program .program_list .movie_cap li{padding: 3px 0;}
+
+
+
+
+.program .program_list img{width: 100%;}
+.program .program_list a:not(:first-child){display: none;}
+
+.program .program_list a > p{background: #ff0000; display: inline-block; border-radius: 30px; color: #fff;  margin-bottom: 30px;}
+
+
+
+@media(max-width:1200px){
+ .program .inner {grid-template-columns: 100%;}
+
+}
+@media(max-width:750px){
+    .program .program_tab button{font-size: 1.6rem;}
+
+}
+
+.program .movie_list{display: grid; grid-template-columns: 1fr 1fr 1fr  ; gap: 50px; margin: 100px 0 300px;}
+
+.program .movie_list li {background: #111; padding-bottom: 50px; position: relative; transition: all 0.5s;}
+.program .movie_list li:hover {background: #222;}
+.program .movie_list li .movie_list_txt {padding: 20px;}
+.program .movie_list li .movie_list_txt .discribe{margin: 5px 0; color: #ddd}
+.program .movie_list li:hover .movie_list_txt .discribe{color: #ff6700; transition: all 0.5s;}
+.program .movie_list li .movie_list_txt h3{font-size: 3rem; }
+.program .movie_list li .movie_list_txt .eng_name{margin:5px 0 20px; }
+.program .movie_list li .movie_list_txt .movie_intro{font-weight: 400; color: #999;}
+.program .movie_list li .movie_list_txt .eng_name{margin:5px 0 20px; }
+.program .movie_list li .movie_list_txt .movie_time{position: absolute; right: 20px; bottom: 20px; color: var(--background-color);}
+
+
+
+.program .movie_list li .movie_list_txt .movie_info_right{position: absolute; right: 20px ; top: 20px ; padding:  5px 10px ; background: var(--background-color); color: var(--sub-color-r); border-radius: 30px; font-weight: 600; }
+.program .movie_list li .movie_list_txt .movie_info_left{position: absolute; left: 1rem ; top: 42% ;}
+.program .movie_list li .movie_list_txt .movie_info_left p{background: rgba(0,0,0,0.6); padding: 5px 10px ; border-radius: 30px; color: var(--background-color); text-shadow: 0 0 12px rgba(0,0,0,0.7); margin-top: 10px ; font-weight: 600;  transition: all 0.5s;}
+.program .movie_list li:hover .movie_list_txt .movie_info_left p{background:#f00;   }
+
+.program:nth-child .movie_list li .movie_list_txt .movie_info_left{position: absolute; left: 1rem ; top: 20% ;}
+
+
+
+#footer {background:#111; color: #999;}
