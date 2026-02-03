@@ -1,5 +1,5 @@
 const visual_swiper = new Swiper(".visual .visual_swiper", {
-    direction: 'horizontal',
+    direction: 'vertical',
     loop: true,
     speed: 1000,
     effect: 'fade',
@@ -10,12 +10,12 @@ const visual_swiper = new Swiper(".visual .visual_swiper", {
 });
 
 const content_swiper = new Swiper(".visual  .content_swiper", {
-    direction: 'horizontal',
+    direction: 'vertical',
     slidesPerView: 2,
-    spaceBetween: 30,
+
     breakpoints: {
         1500: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
         1200: {
             slidesPerView: 3,
@@ -28,12 +28,12 @@ const content_swiper = new Swiper(".visual  .content_swiper", {
         disableOnInteraction: false,
 
     },
-    
+
 });
 
 const coming = new Swiper(".coming .swiper", {
     direction: 'horizontal',
-    slidesPerView: 1.5,
+    slidesPerView: 1.1,
     breakpoints: {
         1500: {
             slidesPerView: 6.5,
@@ -77,22 +77,9 @@ const partner_list = new Swiper(".partner_list", {
         disableOnInteraction: false,
     },
     speed: 6000,
-});
-
-$(".program_section ul li").hover(function () {
-    $(this).toggleClass("big");
-    $(this).siblings().toggleClass("small");
+    freeMode: true,
+    cssMode: false,
 });
 
 
-//poster_list
-const poster_list = new Swiper(".poster_list", {
-
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    speed: 2000,
-});
 

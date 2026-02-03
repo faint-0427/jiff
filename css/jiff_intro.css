@@ -4,48 +4,53 @@
 }
 
 
-
+#main {overflow: hidden; background: #000;}
 
 #main .jiff_visual {padding: 300px 0 320px; text-align: center; align-items: center; background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),  url(../Loops\ Projection\ GIF\ by\ US\ National\ Archives.gif) center / cover;  color: var(--background-color); position: relative; font-weight: 600;}
-#main .jiff_visual .visual_txt h3{ font-size: 4.8rem; padding-bottom: 50px;}
-#main .jiff_visual .visual_txt h3::before{content: "제26회 전주국제영화제 The 26th JEONJU International Film Festival"; display: block; font-size: 24px; padding-bottom: 25px; font-weight: 400;}
-#main .jiff_visual .visual_txt_date p:first-child{background: url(../img_visual_color/4_mix_rnd.png) no-repeat center /cover; border-radius: 50px; display: inline-block; padding: 10px 20px;  ;margin-bottom: 50px; color: #000;}
-#main .jiff_visual .visual_txt_date p{padding: 10px 0;}
+#main .jiff_visual .visual_txt strong{ font-size: 24px; padding-bottom: 25px; font-weight: 400;}
+#main .jiff_visual .visual_txt h3{ font-size: 4.8rem; padding: 20px 0 50px ;}
+
+@keyframes redbg {
+    0%{ transform: translateY(-20px); opacity: 0; letter-spacing: 0;}
+    100%{ transform: translateY(0); opacity: 1;letter-spacing: 1px;}
+    
+}
+
+#main .jiff_visual .visual_txt_date p:first-child{color: #fff; display: inline-block; padding: 10px 20px;  ;margin-bottom: 50px; font-size: 2rem; background: #F00; animation: redbg 0.5s ease-out  ; letter-spacing: 1px;}
+#main .jiff_visual .visual_txt_date p:not(p:first-child){padding: 10px 0; font-size: 2rem; }
 
 #main .jiff_visual .visual_txt_date p span::before{content: ""; width: 5px; height: 5px; background: var(--sub-color-r); display: inline-block; margin: 0 10px 5px 0; border-radius: 30px;} 
-#main .jiff_visual .visual_txt_date p span{margin: 10px;  font-weight: 600;}
+#main .jiff_visual .visual_txt_date p span{margin: 0 10px;  font-weight: 600; }
+#main .jiff_visual .visual_txt a{position: absolute; right: 75px; bottom: 100px; font-size: 1.8rem;  transition:  all 0.5s;  display: block; }
+#main .jiff_visual .visual_txt a::after{width: 0; height: 0; content: ""; position: absolute; right: 0; bottom: 0; background: url(../img_logo/jjproject.png) no-repeat center / cover; z-index: 0; transition:  all 0.5s}
+#main .jiff_visual .visual_txt a:hover::after{width: 300px; height: 420px; }
 
 
-
-.movie_per {position: relative;margin: 100px 0;}
-
+.movie_per {position: relative;padding: 0 0 100px ; background: #000;}
+.movie_per .swiper{filter: brightness(0.5);}
 .movie_partner{  text-align: center; margin: 0 auto;  }
 .movie_partner .inner{max-width:100%; padding: 0;}
 .movie_partner .movie_partner_list{margin-bottom: 10px; }
 .movie_partner .movie_partner_list li{ text-align: center;}
-.movie_partner .movie_partner_list li img{width: 100%; height: 100%; object-fit: contain;}
+.movie_partner .movie_partner_list li img{width: 100%; height: 100%; object-fit: contain; filter: brightness(0.7);}
 .movie_partner .movie_movie_partner_list .swiper-wrapper{transition-timing-function: linear !important;}
 
-@media(max-width:1024px){
-.movie_partner{padding: 100px 0; }
-}
+
 .movie_partner2{ text-align: center;  }
 .movie_partner2 .inner{max-width:100%; padding: 0;}
 .movie_partner2 .movie_partner_list2{margin: 10px 0 10px;  }
 .movie_partner2 .movie_partner_list2 li{ text-align: center;}
-.movie_partner2 .movie_partner_list2 li img{width: 100%; height: 100%; object-fit: contain;}
+.movie_partner2 .movie_partner_list2 li img{width: 100%; height: 100%; object-fit: contain; filter: brightness(0.7);}
 .movie_partner2 .movie_partner_list2 .swiper-wrapper{transition-timing-function: linear !important;}
 
-@media(max-width:1024px){
-.movie_partner2{padding: 100px 0;}
-}
 
-.swiper_txt{position: absolute ;left: 0;  top: 200px; color: #fff; width: 100%;  text-align: center;height: auto; z-index: 50; text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); display: inline-block;background:rgba(0, 0, 0, 0.8);padding: 50px 0;}
-.swiper_txt h3{font-size: 4.8rem;  letter-spacing: 2px; width: auto; margin: 0 auto; padding-bottom: 20px;}
+
+.swiper_txt{color: #fff; text-align: center; display: inline-block;position: absolute ; left: 50%; top: 30%; transform: translateX(-50%); z-index: 30; text-shadow: 0 0 15px #000;}
+.swiper_txt h3{font-size: 4.8rem;  letter-spacing: 2px; width: auto; margin: 0 auto; padding-bottom: 20px; }
 .swiper_txt h3::before{content: ""; display: block;  margin: 0 auto; background:  url(../img_logo/globe_w.png) center / cover; width: 75px; height: 75px; margin-bottom: 25px;}
 
 /* space */
-.space{margin: 200px 0;}
+.space{margin: 0 0 150px;}
 .space ul{display: flex; flex-wrap: wrap;margin-top: 20px;}
 .space ul li{ color: #fff; text-align: center; width: 15%; height: 650px; display: flex; justify-content: center; transition: all 0.8s; align-items: center; filter: drop-shadow(5); }
 .space ul li:nth-child(1){ background: url(../img_jeonju.place/1-5.jpg) no-repeat center / cover;}
@@ -108,12 +113,12 @@
     }
 }
 
-.info_txt{color: #000; margin: 100px 0;}
+.info_txt{color: #fff; margin: 100px 0;}
 .info_txt h2{text-align: center; letter-spacing: 3px; margin-bottom: 50px;}
 .info_txt_list{display: flex; justify-content: space-between; padding: 50px 0;}
-.info_txt_list button{ color: #000; font-size: 2rem; background: none; margin-bottom: 20px; cursor: pointer; position: relative;}
+.info_txt_list button{ color: #fff; font-size: 2rem; background: none; margin-bottom: 20px; cursor: pointer; position: relative;}
 .info_txt_list button::before{opacity: 0; content: ""; display: block; background: #F00; width: 5px; height: 5px; border-radius: 30px; text-align: center;position: absolute;left: 50%;transform: translateX(-50%); top: -50%;}
 .info_txt_list button:hover::before{opacity: 1; animation: fade-downs 0.5s  0s 1 forwards;}
-.info_txt_list li p {display: none; color: #000; width: 30vw; border-top:1px solid #f00;padding-top: 10px; }
+.info_txt_list li p {display: none; color: #000; width: 30vw; border-top:1px solid #f00;padding: 30px; background: #f5f5f5; letter-spacing: 1px; font-weight: 400; line-height: 1.5;}
 .info_txt_list li p.active {display: block;animation: fade-downl 0.5s  0s 1 forwards; }
 
